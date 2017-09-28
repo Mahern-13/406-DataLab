@@ -20,7 +20,7 @@
  * STEP 1: Read the following instructions carefully.
  */
 
-You will provide your solution to the Data Lab by
+/*You will provide your solution to the Data Lab by
 editing the collection of functions in this source file.
 
 INTEGER CODING RULES:
@@ -31,7 +31,7 @@ INTEGER CODING RULES:
  
   int Funct(arg1, arg2, ...) {
       /* brief description of how your implementation works */
-      int var1 = Expr1;
+/*      int var1 = Expr1;
       ...
       int varM = ExprM;
 
@@ -88,7 +88,7 @@ EXAMPLES OF ACCEPTABLE CODING STYLE:
      return result;
   }
 
-FLOATING POINT CODING RULES
+/*FLOATING POINT CODING RULES
 
 For the problems that require you to implent floating-point operations,
 the coding rules are less strict.  You are allowed to use looping and
@@ -118,7 +118,7 @@ NOTES:
      header comment for each function. If there are any inconsistencies 
      between the maximum ops in the writeup and in this file, consider
      this file the authoritative source.
-
+*/
 /*
  * STEP 2: Modify the following functions according the coding rules.
  * 
