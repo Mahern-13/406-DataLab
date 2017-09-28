@@ -197,7 +197,7 @@ int getByte(int x, int n) {
 int logicalShift(int x, int n) {
     int rshift = (x >> n);
     int n1 = (((0x1 << 32 >> n) << 1);
-    return rshift & ~n1;
+    return (rshift & ~n1);
 }
 /* 
  * fitsBits - return 1 if x can be represented as an 
@@ -223,7 +223,7 @@ int fitsBits(int x, int n) {
  *   Rating: 2
  */
 int negate(int x) {
-  return (~x)+1
+    return (~x)+1;
 }
 /* 
  * isPositive - return 1 if x > 0, return 0 otherwise 
@@ -233,5 +233,5 @@ int negate(int x) {
  *   Rating: 3
  */
 int isPositive(int x) {
-  return !((x & (1 << 31)) | !x)
+    return !((x & (1 << 31)) | !x);
 }
