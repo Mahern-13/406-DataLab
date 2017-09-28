@@ -172,7 +172,7 @@ NOTES:
  *   Rating: 1
  */
 int bitAnd(int x, int y) {
-  return 2;
+  return ~(~x|~y);
 }
 /* 
  * getByte - Extract byte n from word x
@@ -183,7 +183,8 @@ int bitAnd(int x, int y) {
  *   Rating: 2
  */
 int getByte(int x, int n) {
-  return 2;
+    int result = (1<<n)-1;
+    return (result & x);
 }
 /* 
  * logicalShift - shift x to the right by n, using a logical shift
@@ -194,7 +195,9 @@ int getByte(int x, int n) {
  *   Rating: 3 
  */
 int logicalShift(int x, int n) {
-  return 2;
+    int rshift = (x >> n);
+    int n1 = (((0x1 << 32 >> n) << 1);
+    return rshift & ~n1;
 }
 /* 
  * fitsBits - return 1 if x can be represented as an 
@@ -206,7 +209,11 @@ int logicalShift(int x, int n) {
  *   Rating: 2
  */
 int fitsBits(int x, int n) {
-  return 2;
+    int mask = x >> 31;
+    int negmask = (~x & mask);
+    int posmask = (x & ~mask);
+    int highest = negmask + posmask;
+    return !((highest) >> (n + ~0));
 }
 /* 
  * negate - return -x 
@@ -216,7 +223,7 @@ int fitsBits(int x, int n) {
  *   Rating: 2
  */
 int negate(int x) {
-  return 2;
+  return (~x)+1
 }
 /* 
  * isPositive - return 1 if x > 0, return 0 otherwise 
@@ -226,5 +233,5 @@ int negate(int x) {
  *   Rating: 3
  */
 int isPositive(int x) {
-  return 2;
+  return !((x & (1 << 31)) | !x)
 }
