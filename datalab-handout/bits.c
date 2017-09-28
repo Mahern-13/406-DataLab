@@ -183,8 +183,7 @@ int bitAnd(int x, int y) {
  *   Rating: 2
  */
 int getByte(int x, int n) {
-    int result = (255<<(n+(~1+1)));
-    return (result & x);
+    return (x >> 8*n) & 255;
 }
 /* 
  * logicalShift - shift x to the right by n, using a logical shift
