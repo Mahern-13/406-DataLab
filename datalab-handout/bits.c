@@ -196,7 +196,7 @@ int getByte(int x, int n) {
  */
 int logicalShift(int x, int n) {
     int rshift = (x >> n);
-    int n1 = (((0x1 << 32 >> n) << 1));
+    int n1 = (((0x1 << 31) >> n) << 1);
     return (rshift & ~n1);
 }
 /* 
