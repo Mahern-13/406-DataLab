@@ -183,7 +183,7 @@ int bitAnd(int x, int y) {
  *   Rating: 2
  */
 int getByte(int x, int n) {
-    int result = (1<<n)+(~1);
+    int result = (1<<n);
     return (result & x);
 }
 /* 
